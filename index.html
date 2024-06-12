@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Funções</title>
+    <link rel="shortcut icon" href="Calculadora.ico">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function calcularMedia() {
+            // Obter os valores informados pelo usuário
+            var nota1 = parseFloat(document.getElementById ('nota1').value);
+            var nota2 = parseFloat(document.getElementById ('nota2').value);
+            var nota3 = parseFloat(document.getElementById ('nota3').value);
+            var nota4 = parseFloat(document.getElementById ('nota4').value);
+            var nota5 = parseFloat(document.getElementById ('nota5').value);
+            // Calcular a média aritmética
+            var media = (nota1 + nota2 + nota3 + nota4 + nota5) / 5;
+            // Exibir o resultado; o método toFixed(2) significa que terá 2 casas decimais
+            document.getElementById('resultado').innerHTML = "A média é: " + media.toFixed(2)
+        }
+        </script>
+</head>
+<body>
+    <header class="header">ESCOLA TECNOLOGIA E SABER</header>
+    <br><br><p>Olá aluno(a)! Chegamos ao final de mais um bimestre e agora vamos calcular a média final deste bimestre de uma maneira bem fácil.</p>
+    <p>Basta colocar as notas recebidas em suas avaliações (1, 2, Nacional, Individual e 3) nos campos específicos e clicar no botão.</p> 
+    <h3>Vamos lá? É simples e fácil!<h3><br><br>
+    <h2>Cálculo de Média</h2><br>
+    <label for="nota1">Nota Av1</label>
+    <input type="number" id="nota1"><br><br>
+    <label for="nota2">Nota Av2</label>
+    <input type="number" id="nota2"><br><br>
+    <label for="nota3">Nota AvN</label>
+    <input type="number" id="nota3"><br><br>
+    <label for="nota4">Nota AvI</label>
+    <input type="number" id="nota4"><br><br>
+    <label for="nota5">Nota Av3</label>
+    <input type="number" id="nota5"><br><br><br>
+    <button onclick="calcularMedia()">Calcular Média</button><br><br>  
+    <div id="resultado"></div><br><br><br>
+    <footer class="footer">Desenvolvido por Debora Dimitruk para Descodificadas Trilha 2 1/2024</footer>
+</body>
+</html>
